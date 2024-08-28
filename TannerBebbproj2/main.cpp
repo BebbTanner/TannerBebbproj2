@@ -1,7 +1,6 @@
-//  adding the functions for signs extention and two's comp for binary notation
+//  Binary number calculator updated
 //  Tanner Bebb
-//  August 30th 2023
-
+//  August 28 2024
 #include <iostream>
 #include <string>
 #include <cassert>
@@ -19,14 +18,14 @@ string signed_extension(string s);
 
 string decimal_to_binary_signed(int n);
 // precondition: n is an integer
-// postcondition: n’s two's complement binary representation is returned as a string of 0s and 1s
+// postcondition: nâ€™s two's complement binary representation is returned as a string of 0s and 1s
 
 string add_binaries_signed(string b1, string b2);
 // precondition: b1 and b2 are strings that consists of 0s and 1s at most 32 bits, i.e.
 //               b1 and b2 are two's complement binary representations of two integers. "0" is 0, "1" is -1
 //               However, "10" will be consider as "1111111111111110" as -2
 // postcondition: the sum of b1 and b2 is returned as (up to) 32 bits two's complement representation.
-// For instance, if b1 = “1101” (-3), b2 = “01” (+1), then the return value is “1111111111111110” (-2)
+// For instance, if b1 = â€œ1101â€ (-3), b2 = â€œ01â€ (+1), then the return value is â€œ1111111111111110â€ (-2)
 
 string twos_complement(string s);
 // precondition: s is a string that consists of only 0s and 1s
@@ -39,33 +38,33 @@ int binary_to_decimal(string s);
 
 string decimal_to_binary(int n);
 // precondition: n is a positive integer
-// postcondition: n’s binary representation is returned as a string of 0s and 1s
+// postcondition: nâ€™s binary representation is returned as a string of 0s and 1s
 
 string add_binaries(string b1, string b2);
 // precondition: b1 and b2 are strings that consists of 0s and 1s, i.e.
 //               b1 and b2 are binary representations of two positive integers
 // postcondition: the sum of b1 and b2 is returned. For instance,
-//  if b1 = “11”, b2 = “01”, then the return value is “100”
+//  if b1 = â€œ11â€, b2 = â€œ01â€, then the return value is â€œ100â€
 
 void menu();
 // display the menu. Student shall not modify this function
 
 int grade();
-// returns an integer that represents the student’s grade of this projects.
+// returns an integer that represents the studentâ€™s grade of this projects.
 // Student shall NOT modify
 
 bool is_binary(string b);
 // returns true if the given string s consists of only 0s and 1s; false otherwise
 
 bool test_binary_to_decimal_signed();
-// returns true if the student’s implementation of binary_to_decimal function
+// returns true if the studentâ€™s implementation of binary_to_decimal function
 // is correct; false otherwise. Student shall not modify this function
 
 bool test_decimal_to_binary_signed();
-//  returns true if the student’s implementation of decimal_to_binary function is correct; false otherwise. Student shall not modify this function
+//  returns true if the studentâ€™s implementation of decimal_to_binary function is correct; false otherwise. Student shall not modify this function
 
 bool test_add_binaries_signed();
-// which returns true if the student’s implementation of add_binaries function
+// which returns true if the studentâ€™s implementation of add_binaries function
 // is correct; false otherwise. Student shall not modify this function
 
 bool test_signed_extension();
