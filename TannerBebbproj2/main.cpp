@@ -144,7 +144,7 @@ int main()
 }
 
 string signed_extension(string s) {
-    // you implement this one first
+    int length = s.length();
     return "0";
 }
 
