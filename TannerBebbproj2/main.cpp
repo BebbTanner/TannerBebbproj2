@@ -155,6 +155,11 @@ int binary_to_decimal_signed(string s) {
     int length = s.length();
     int result = 0;
 
+    for (int i = 1; i < length; i++)
+    {
+        result = result * 2 + (s[i] - '0');
+    }
+
     return 0;
 }
 
