@@ -144,13 +144,17 @@ int main()
 }
 
 string signed_extension(string s) {
+
     int length = s.length();
     string result = string(16 - length, s[0]) + s;
     return result;
 }
 
 int binary_to_decimal_signed(string s) {
-    // you implement this one third
+
+    int length = s.length();
+    int result = 0;
+
     return 0;
 }
 
