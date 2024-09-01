@@ -160,7 +160,14 @@ int binary_to_decimal_signed(string s) {
         result = result * 2 + (s[i] - '0');
     }
 
-    return 0;
+
+    if (s[0] == '1')
+    {
+        result = result - (1 << (length - 1));
+    }
+
+    return result;
+
 }
 
 string decimal_to_binary_signed(int n) {
