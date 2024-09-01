@@ -171,8 +171,17 @@ int binary_to_decimal_signed(string s) {
 }
 
 string decimal_to_binary_signed(int n) {
-    // you implement this one fourth
-    return "0";
+
+    string result = "";
+
+    for (int i = 0; i < 16; i++)
+    {
+        result = char((n % 2) + '0') + result;
+        n = n / 2;
+    }
+
+    return result;
+
 }
 
 string add_binaries_signed(string b1, string b2) {
