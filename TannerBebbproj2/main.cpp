@@ -185,13 +185,36 @@ string decimal_to_binary_signed(int n) {
 }
 
 string add_binaries_signed(string b1, string b2) {
-    // you implement this one fifth
-    return "0";
+    
+    int carry = 0;
+    string result = "";
+
+    for (int i = 15; i >= 0; i--)
+    {
+        int bit1 = b1[i] - '0';
+        int bit2 = b2[i] - '0';
+
+        int sum = bit1 + bit2 + carry;
+        carry = sum / 2;
+
+        result = char((sum % 2) + '0') + result;
+    }
+
+    return result;
+
 }
 
 string twos_complement(string s) {
-    // you implement this one second
-    return "0";
+
+    int length = s.length();
+    string result = "";
+
+    for (int i = 0; i < length; i++)
+    {
+        result += (s[i] == '0') ? '1' : '0';
+    }
+
+    return result;
 }
 
 int binary_to_decimal(string s) {
@@ -215,25 +238,25 @@ string decimal_to_binary(int n) {
 
 string add_binaries(string b1, string b2) {
     // you implement this
-    assert(is_binary(b1) && is_binary(b2));
-    string result = "";
-    int carry = 0;
-    int i1 = (int)b1.length() - 1;
-    int i2 = (int)b2.length() - 1;
-    while (i1 >= 0 || i2 >= 0)
-    {
-        int d1 = 0, d2 = 0;
-        if (i1 >= 0) d1 = b1[i1] - 48;
-        if (i2 >= 0) d2 = b2[i2] - 48;
-        int sum = carry + d1 + d2; // single digit sum
-        carry = sum / 2; // carry is 1 if sum is 2 or 3; 0 otherwise
-        result = string(1, (char)(48 + sum % 2)) + result;
-        i1--;
-        i2--;
-    }
-    if (carry != 0)
-        result = "1" + result;
-    return result;
+    //assert(is_binary(b1) && is_binary(b2));
+    //string result = "";
+    //int carry = 0;
+    //int i1 = (int)b1.length() - 1;
+    //int i2 = (int)b2.length() - 1;
+    //while (i1 >= 0 || i2 >= 0)
+    //{
+    //    int d1 = 0, d2 = 0;
+    //    if (i1 >= 0) d1 = b1[i1] - 48;
+    //    if (i2 >= 0) d2 = b2[i2] - 48;
+    //    int sum = carry + d1 + d2; // single digit sum
+    //    carry = sum / 2; // carry is 1 if sum is 2 or 3; 0 otherwise
+    //    result = string(1, (char)(48 + sum % 2)) + result;
+    //    i1--;
+    //    i2--;
+    //}
+    //if (carry != 0)
+    //    result = "1" + result;
+    return "0";
 }
 void menu()
 {
